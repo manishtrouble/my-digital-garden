@@ -1,3 +1,8 @@
 public
 node_modules
 .quartz-cache
+content
+.roles
+AGENTS.md
+CLAUDE.md
+CLAUDE.local.md

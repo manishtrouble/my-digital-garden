@@ -1,3 +1,94 @@
 @use "./variables.scss" as *;
 
 // put your custom CSS here!
+
+body {
+  font-size: 1.02rem;
+  letter-spacing: 0.002em;
+}
+
+h1,
+h2,
+h3,
+.page-title {
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+.page-title {
+  font-family: var(--codeFont);
+  font-size: 1.3rem;
+  letter-spacing: -0.045em;
+
+  & > a {
+    color: var(--dark);
+    font-weight: 600;
+
+    &:hover {
+      color: var(--secondary);
+    }
+  }
+}
+
+.content-meta {
+  color: var(--gray);
+  font-family: var(--codeFont);
+  font-size: 0.72rem;
+  letter-spacing: 0.055em;
+  text-transform: uppercase;
+}
+
+article {
+  & p {
+    line-height: 1.72;
+  }
+
+  & a:not(.tag-link) {
+    text-decoration-line: underline;
+    text-decoration-color: color-mix(in srgb, var(--secondary) 38%, transparent);
+    text-decoration-thickness: 0.08em;
+    text-underline-offset: 0.16em;
+  }
+
+  & a.internal {
+    padding: 0;
+    border-radius: 0;
+    background-color: transparent;
+  }
+
+  & > hr {
+    margin: 2.75rem 0;
+    border: 0;
+    border-top: 1px solid var(--lightgray);
+  }
+}
+
+.sidebar {
+  & .recent-notes > h3,
+  & .graph > h3,
+  & .toc > h3,
+  & .backlinks > h3 {
+    color: var(--gray);
+    font-family: var(--codeFont);
+    font-size: 0.72rem;
+    letter-spacing: 0.055em;
+    text-transform: uppercase;
+  }
+}
+
+body[data-slug="index"] {
+  & #quartz-body > .center > .page-header .article-title {
+    margin-top: 0.5rem;
+    font-size: clamp(2rem, 3.6vw, 2.8rem);
+    line-height: 1.08;
+  }
+
+  & #quartz-body > .center > .page-header .content-meta {
+    margin-top: 0.8rem;
+  }
+
+  & #quartz-body > .center > article > h2 {
+    margin-top: 2.75rem;
+    font-size: 1.6rem;
+  }
+}

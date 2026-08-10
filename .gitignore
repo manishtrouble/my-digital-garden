@@ -12,3 +12,5 @@ replit.nix
 .quartz/
 quartz/cli/tui/dist/
 .turbo/
+CLAUDE.local.md
+.roles/active.md
